@@ -47,6 +47,19 @@ if (applicationForm) {
     });
 }
 
+// Contact page form submission
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        contactForm.reset();
+        showToast('Message sent!');
+        setTimeout(() => {
+            window.location.reload();
+        }, 1500);
+    });
+}
+
 // Toast helper
 function showToast(msg) {
     const toast = document.createElement('div');
