@@ -90,10 +90,17 @@ a:hover {
     background-color: rgba(255,255,255,0.95);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid #e1e4e8;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     transition: background-color var(--transition);
+}
+
+/* ensure body content doesn't hide behind fixed navbar */
+body {
+    padding-top: 60px; /* height of navbar */
 }
 .navbar.scrolled {
     background-color: #fff;
