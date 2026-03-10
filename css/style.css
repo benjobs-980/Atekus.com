@@ -152,9 +152,20 @@ body {
     cursor: pointer;
     font-size: 1.25rem;
     transition: transform var(--transition);
+    z-index: 1100; /* keep above other header content */
+    color: var(--color-primary); /* visible even when using character fallback */
+}
+.mobile-menu-toggle i {
+    color: inherit;
 }
 .mobile-menu-toggle.open {
     transform: rotate(90deg);
+}
+
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none; /* explicitly hide on larger screens */
+    }
 }
 
 /* Hero sections */
